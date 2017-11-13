@@ -1,12 +1,14 @@
-﻿Imports Units.Units
+﻿
+Namespace Global.Units.UnitValue.Distance
 
-Namespace Global.Units.UnitValue.Distace
-
-    Partial Public NotInheritable Class Metres : Inherits UnitValue.AbstractUnitValue(Of Distance.Metres)
+    Partial Public NotInheritable Class Metres : Inherits AbstractUnitValue(Of Units.Distance.Metres)
         Public Sub New(Value As Decimal)
-            MyBase.New(Value, Distance.Metres.Instance)
+            MyBase.New(Value, Global.Units.Units.Distance.Metres.Instance)
         End Sub
 
+        Public Shared Widening Operator CType(x As Decimal) As Metres
+            Return New Metres(x)
+        End Operator
     End Class
 
 End Namespace

@@ -5,7 +5,7 @@
         ReadOnly Property FullName As String
     End Interface
 
-    Public MustInherit Class AbstractUnits : Implements IAbstractUnits
+    Partial Public MustInherit Class AbstractUnits : Implements IAbstractUnits
 
         Public MustOverride ReadOnly Property Symbol As String Implements IAbstractUnits.Symbol
         Public MustOverride ReadOnly Property FullName As String Implements IAbstractUnits.FullName

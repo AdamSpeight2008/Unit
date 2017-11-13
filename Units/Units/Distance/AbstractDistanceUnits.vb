@@ -2,7 +2,7 @@
     Interface IUnitsKind_Distance : Inherits IAbstractUnits
     End Interface
 
-    Public MustInherit Class AbstractDistanceUnits
+    Partial Public MustInherit Class AbstractDistanceUnits
         Inherits AbstractUnits
 
         Implements IUnitsKind_Distance

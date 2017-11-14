@@ -77,10 +77,12 @@
     <Import Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Time\UnitValue_Seconds_Tests.vb" />
+    <Compile Include="Time\UnitValue_Minutes_Tests.vb" />
     <Compile Include="UnitTest1.vb" />
     <Compile Include="UnitTest2.vb" />
-    <Compile Include="UnitValue_Millimetres_Tests.vb" />
-    <Compile Include="UnitValue_Metres_Tests.vb" />
+    <Compile Include="Distance\UnitValue_Millimetres_Tests.vb" />
+    <Compile Include="Distance\UnitValue_Metres_Tests.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

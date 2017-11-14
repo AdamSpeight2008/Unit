@@ -1,11 +1,11 @@
-﻿Namespace Global.Units.Units.Distance
-    Interface IUnitsKind_Distance : Inherits IAbstractUnits
+﻿Namespace Global.Units.Units.Time
+    Interface IUnitsKind_Time : Inherits IAbstractUnits
     End Interface
 
     Partial Public MustInherit Class AbstractTimeUnits
         Inherits AbstractUnits
 
-        Implements IUnitsKind_Distance
+        Implements IUnitsKind_Time
 
         Friend Sub New(Symbol As String, FullName As String)
             Me.Symbol = Symbol

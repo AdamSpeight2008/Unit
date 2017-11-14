@@ -1,6 +1,6 @@
 ﻿Namespace Global.Units.Units.Distance
 
-    Partial Public NotInheritable Class Millimetres : Inherits AbstractDistanceUnits
+    Partial Public NotInheritable Class Millimetres : Inherits AbstractTimeUnits
         Public Shared ReadOnly Property Instance As New Millimetres
         Private Sub New()
             MyBase.New("mm", "millimetres")

@@ -15,6 +15,21 @@
         Public ReadOnly Property Value As Decimal Implements IUnitValue(Of TUnits).Value
         Public ReadOnly Property Units As TUnits Implements IUnitValue(Of TUnits).Units
 
+        Friend MustOverride Function CreateNew(Value As Decimal) As AbstractUnitValue(Of TUnits)
+
+        Private Function Op_Add(L As AbstractUnitValue(Of TUnits), R As AbstractUnitValue(Of TUnits)) As AbstractUnitValue(Of TUnits)
+            Return L.CreateNew(L.Value + R.Value)
+        End Function
+        Private Function Op_Sub(L As AbstractUnitValue(Of TUnits), R As AbstractUnitValue(Of TUnits)) As AbstractUnitValue(Of TUnits)
+            Return L.CreateNew(L.Value - R.Value)
+        End Function
+
+        Public Shared Operator +(L As AbstractUnitValue(Of TUnits), R As AbstractUnitValue(Of TUnits)) As AbstractUnitValue(Of TUnits)
+            Return L.Op_Add(L, R)
+        End Operator
+        Public Shared Operator -(L As AbstractUnitValue(Of TUnits), R As AbstractUnitValue(Of TUnits)) As AbstractUnitValue(Of TUnits)
+            Return L.Op_Sub(L, R)
+        End Operator
 #Region "ToString"
         Public Overrides Function ToString() As String
             Return ToString("")

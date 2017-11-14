@@ -77,6 +77,8 @@
     <Import Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UnitTest1.vb" />
+    <Compile Include="UnitTest2.vb" />
     <Compile Include="UnitValue_Millimetres_Tests.vb" />
     <Compile Include="UnitValue_Metres_Tests.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

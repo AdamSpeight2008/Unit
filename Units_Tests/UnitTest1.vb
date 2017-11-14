@@ -15,7 +15,7 @@ Public Class UnitTest2
         Assert.IsTrue(As_m.Units.Symbol = "m")
         Assert.IsTrue(As_mm.Value = 1010)
         Assert.IsTrue(As_mm.Units.Symbol = "mm")
-        Dim sec As Time.Seconds = 1
+        Dim sec = Units.UnitValue.Temperature.Celsius.Common.AbsoluteZero
         Dim min As Time.Minutes = 60
     End Sub
 
